@@ -1,6 +1,5 @@
 
-import java.util.ArrayList;
-import java.util.List;
+
 import java.util.Scanner;
 
 class Main {
@@ -8,7 +7,6 @@ class Main {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
-        List<Integer> results = new ArrayList<>();
         int length = Integer.parseInt(sc.nextLine());
         while (length > 0 && sc.hasNextLine()) {
 
@@ -40,7 +38,6 @@ class Main {
                 }
                 
                 int score = max(correctOrder, studentOrder);
-                results.add(score);
                 System.out.println(score);
             }
         }
