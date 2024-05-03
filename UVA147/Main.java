@@ -20,7 +20,14 @@ class Main {
             int amount = (int) value;
 
             long max = max(amount);
-            print(input, max);
+
+            String formattedValue = String.format("%.2f", input);
+            
+            while (formattedValue.length() < 6) {
+                formattedValue = " " + formattedValue;
+            }
+            System.out.print(formattedValue);
+            System.out.println(String.format("%17d", max));
         }
 
         sc.close();
@@ -34,6 +41,8 @@ class Main {
                 count++;
             else
                 break;
+        
+        
         long[][] dp = new long[count][amount / 5 + 1]; // every amount is a multiple of 5
         // fill first positions with 1
         for (int i = 0; i < dp.length; i++) {
@@ -51,37 +60,8 @@ class Main {
                     int position = (5 * j - coins[i]) / 5;
                     dp[i][j] = dp[i - 1][j] + dp[i][position];
                 }
-
             }
         }
-
         return dp[dp.length - 1][dp[0].length - 1];
-
     }
-
-    // needs special formatting
-    // 6 wide for the amount
-    // 17 wide for the total ways to pay
-    public static void print(double input, long max) {
-        StringBuilder sb = new StringBuilder();
-        String formattedValue = String.format("%.2f", input);
-        int i = 0;
-        while (i < 6 - formattedValue.length()) {
-            i++;
-            sb.append(" ");
-        }
-        i = 0;
-        sb.append(formattedValue);
-
-        String maxValue = max + "";
-
-        while (i < 17 - maxValue.length()) {
-            sb.append(" ");
-            i++;
-        }
-        sb.append(maxValue);
-
-        System.out.println(sb.toString());
-    }
-
 }
