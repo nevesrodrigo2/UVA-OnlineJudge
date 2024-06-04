@@ -9,6 +9,6 @@ UVA OnlineJudge Solutions
 - [344: Roman Digititis](https://github.com/nevesrodrigo2/UVA-OnlineJudge/tree/main/UVA344)
 - [455: Periodic Strings](https://github.com/nevesrodrigo2/UVA-OnlineJudge/tree/main/UVA455)
 - [573: The Snail](https://github.com/nevesrodrigo2/UVA-OnlineJudge/tree/main/UVA573)
-
+- [612: DNA Sorting](https://github.com/nevesrodrigo2/UVA-OnlineJudge/tree/main/UVA612)
 
 
